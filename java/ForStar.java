@@ -12,6 +12,7 @@ public class ForStar {
                 System.out.print("*");
             }
             System.out.println();
+
         }
     }
 }
