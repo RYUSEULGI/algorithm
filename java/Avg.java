@@ -3,9 +3,10 @@ import java.util.Scanner;
 public class Avg {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int sum = 0;
-        int avg = 0;
-        int cnt = 0;
+        double sum = 0;
+        double avg = 0;
+        double cnt = 0;
+        double b = 0;
 
         System.out.println("몇개의 과목을 확인 할 건가요?");
         int a = scan.nextInt();
@@ -31,10 +32,9 @@ public class Avg {
                 if (arr2[k] > avg) {
                     cnt++;
                 }
-                int b = cnt / arr[i];
-                System.out.println(b);
+                b = cnt / arr[i] * 100;
             }
-
+            System.out.printf("%.3f%%", b);
         }
 
     }
