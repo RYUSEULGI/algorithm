@@ -7,17 +7,23 @@ public class Fountain {
         int a = scan.nextInt();
         int cnt = 0;
         int line = 0;
+        int top;
+        int bottom;
 
         while (cnt < a) {
             line++;
-            // cnt를 정의 해주어야 함
+            cnt = line * (line + 1) / 2; // 등차수열 공식 이용하기
         }
 
         // 짝수일 경우 홀수일 경우 나눠서 생각하기
         if (line % 2 == 0) {
-
+            top = line - (cnt - a);
+            bottom = 1 + (cnt - a);
+            System.out.println(top + "/" + bottom);
         } else {
-
+            top = 1 + (cnt - a);
+            bottom = line - (cnt - a);
+            System.out.println(top + "/" + bottom);
         }
     }
 }
