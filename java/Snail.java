@@ -15,7 +15,9 @@ public class Snail {
 
         int day = (total - down) / (up - down);
 
-        if (day != 0) {
+        // 값이 0이 아닌게 아니라
+        // 나머지가 0 이 아니어야 하기 때문에
+        if ((total - down) % (up - down) != 0) {
             day++;
         }
         System.out.println(day + "일이 걸린다");
